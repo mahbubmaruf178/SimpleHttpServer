@@ -101,11 +101,12 @@ func (h *TCPHandler) handleConnection(conn net.Conn) {
 	}
 
 	// Print the received request
-	fmt.Println("Received request:")
-	fmt.Println("Method:", method)
-	fmt.Println("Path:", path)
-	fmt.Println("Headers:", headers)
-	fmt.Println("Body:", body)
+	//fmt.Println("Received request:")
+	//fmt.Println("Method:", method)
+	//fmt.Println("Path:", path)
+	//fmt.Println("Headers:", headers)
+	//fmt.Println("Body:", body)
+	fmt.Sprintf("Received request:\nMethod: %s\nPath: %s\nHeaders: %v\nBody: %s", method, path, headers, body)
 
 	// Find a matching route and handle the request
 	for _, route := range h.routes {
